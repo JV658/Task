@@ -10,13 +10,17 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var todoList = ToDoList(0)
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        let navController = window?.rootViewController as! UINavigationController
+        let tableController = navController.topViewController as! TodoTableViewController
+        tableController.todoList = todoList
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -52,6 +56,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         print(#function)
         
         // save data
+        todoList.save()
     }
 
 

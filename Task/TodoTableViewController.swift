@@ -9,7 +9,8 @@ import UIKit
 
 class TodoTableViewController: UITableViewController {
 
-    var todoList = ToDoList(2)
+//  var todoList = ToDoList(2)
+    var todoList: ToDoList!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,5 +123,7 @@ class TodoTableViewController: UITableViewController {
             dst.indexPath = indexPath
             
         }
+        
+        todoList.save()
     }
 }
