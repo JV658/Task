@@ -7,7 +7,9 @@
 
 import Foundation
 
-class ToDo {
+class ToDo: NSObject, NSCoding {
+
+    
     var title: String
     var desc: String?
     var dateCreated: Date

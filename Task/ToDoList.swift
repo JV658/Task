@@ -22,13 +22,13 @@ class ToDoList {
     
     init(_ count: Int){
         for _ in 1...count {
-            addTodo()
+            let index = Int.random(in: 0..<templates.count)
+            let title = templates[index]
+            addTodo(title: title)
         }
     }
     
-    func addTodo(){
-        let index = Int.random(in: 0..<templates.count)
-        let title = templates[index]
+    func addTodo(title: String){
         let newTodo = ToDo(title: title)
         list.append(newTodo)
     }

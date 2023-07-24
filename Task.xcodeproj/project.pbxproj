@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB4B7BE32A657A980057B679 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4B7BE22A657A980057B679 /* DetailViewController.swift */; };
 		DBE40E182A5C316900558A76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE40E172A5C316900558A76 /* AppDelegate.swift */; };
 		DBE40E1A2A5C316900558A76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE40E192A5C316900558A76 /* SceneDelegate.swift */; };
 		DBE40E1F2A5C316900558A76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBE40E1D2A5C316900558A76 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB4B7BE22A657A980057B679 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DBE40E142A5C316900558A76 /* Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE40E172A5C316900558A76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBE40E192A5C316900558A76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				DBE40E2D2A5C39A500558A76 /* ToDo.swift */,
 				DBE40E2F2A5C39B600558A76 /* ToDoList.swift */,
 				DBE40E1D2A5C316900558A76 /* Main.storyboard */,
+				DB4B7BE22A657A980057B679 /* DetailViewController.swift */,
 				DBE40E202A5C316A00558A76 /* Assets.xcassets */,
 				DBE40E222A5C316A00558A76 /* LaunchScreen.storyboard */,
 				DBE40E252A5C316A00558A76 /* Info.plist */,
@@ -147,6 +150,7 @@
 				DBE40E182A5C316900558A76 /* AppDelegate.swift in Sources */,
 				DBE40E2C2A5C333B00558A76 /* TodoTableViewController.swift in Sources */,
 				DBE40E302A5C39B600558A76 /* ToDoList.swift in Sources */,
+				DB4B7BE32A657A980057B679 /* DetailViewController.swift in Sources */,
 				DBE40E1A2A5C316900558A76 /* SceneDelegate.swift in Sources */,
 				DBE40E2E2A5C39A500558A76 /* ToDo.swift in Sources */,
 			);
@@ -303,6 +307,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,6 +336,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

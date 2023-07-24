@@ -9,26 +9,7 @@ import UIKit
 
 class TodoTableViewController: UITableViewController {
 
-    var todoList = ToDoList(6)
-    
-    @IBAction func addToDo() {
-        todoList.addTodo()
-        let indexPath = IndexPath(row: todoList.list.count - 1, section: 0)
-        tableView.insertRows(at: [indexPath], with: .left)
-        print(todoList.list.count)
-    }
-    
-    @IBAction func toggleEditMode(_ sender: UIButton) {
-        if isEditing {
-            setEditing(false, animated: true)
-            sender.setTitle("Edit", for: .normal)
-        } else {
-            setEditing(true, animated: true)
-            sender.setTitle("Done", for: .normal)
-        }
-        
-        tableView.reloadData()
-    }
+    var todoList = ToDoList(2)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,10 +18,32 @@ class TodoTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+         self.navigationItem.leftBarButtonItem = self.editButtonItem
+                
+        print(#function)
+        
+        
+        /// programatically adding views test
+        
+//        let frame1 = CGRect(x: 200, y: 150, width: 100, height: 100)
+//        let view1 = UIView(frame: frame1)
+//        view1.backgroundColor = .blue
+//        view.addSubview(view1)
+//
+//        let frame2 = CGRect(x: 30, y: 30, width: 25, height: 25)
+//        let view2 = UIView(frame: frame2)
+//        view2.backgroundColor = .green
+//        view1.addSubview(view2)
         
     }
 
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//
+//        print(#function)
+//        tableView.reloadData()
+//    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -98,14 +101,26 @@ class TodoTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        
+        let dst = segue.destination as! DetailViewController
+        dst.tableView = tableView
+        dst.todoList = todoList
+        
+        
+        if segue.identifier == "edit"
+        {
+            let indexPath = tableView.indexPathForSelectedRow!
+            let row = indexPath.row
+            dst.todo = todoList.list[row]
+            dst.indexPath = indexPath
+            
+        }
     }
-    */
-
 }
